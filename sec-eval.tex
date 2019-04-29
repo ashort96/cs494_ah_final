@@ -1,0 +1,27 @@
+%!TEX root = ./main.tex
+
+
+
+\section{Proposed Evaluation}
+
+
+
+To evaluate the tool, two groups of participants will be selected from an Operating Systems course, Group $A$ and Group $B$.
+%
+Both groups will be given the executable UART\cite{6558126} driver that should be able to run on the NS16550A\cite{zhao2013} chipset.
+%
+The NS16550A chipset requires that the DLAB bit be set while setting the divisor, but the executable will not do this.
+%
+The executable will have a bug that will allow it to boot in QEMU, but would otherwise fail on hardware.
+%
+The executable will not check the value of the DLAB bit while setting the divisor.
+%
+Both groups will be allowed to see a demonstration of the executable working on QEMU and not working on the NS16550A.
+%
+Both groups will also receive the same documentation of what should happen when the executable runs.
+%
+Group A will only be allowed to use QEMU's built in debugging features, and Group B will only be allowed to use \tool{}.
+%
+For a participant to pass the test, he/she must correctly identify the bug within a thirty minutes.
+%
+The time the participant takes to correctly identify the bug will be recorded and used for the results.
