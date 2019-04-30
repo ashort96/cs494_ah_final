@@ -6,6 +6,30 @@
 
 
 
-Debugging low level projects, such as operating systems, is very difficult for novices.
+Developing with low level languages, such as RISC-V, is difficult.
 %
-In the future, 
+There are not many tools available, especially to students, that help them understand what is going on under the hood.
+%
+The \tool{} aims to help its users to understand what each line of code is doing and how it interacts with the computer.
+%
+
+
+\tool{} could be improved several ways.
+%
+For one, it could include more useful and helpful error messages.
+%
+Currently, the tool only gives very general error messages, such as it cannot read value X at line Y.
+%
+The reason for that is that the code is not actually compiled.
+%
+Instead, a parser and lexer was written for the application.
+%
+Having the code actually be compiled in a sandbox would be more accurate, and would give better feedback.
+%
+Additionally, it would require less updates on our end as the language continues to develop.
+%
+If we have a new backend be created that can execute code in a sandboxed environment, this will lessen the stress on the client and make it easier to continue the development.
+%
+
+
+Overall, I believe this tool can help novice programmers grasp of how RISC-V and other assembly languages affect the machine as it is being ran.

@@ -3,25 +3,45 @@
 
 
 \section{Proposed Evaluation}
+To evaluate the tool, students will be picked from the CS130 course at the University of Tennessee, Knoxville.
+%
+These students will be within their first year of Computer Science, and they will be learning RISC-V.
+%
+Assignments will be uploaded to the application, and students will be asked to complete the tasks within a fifty minute time frame.
+%
+There will be two tasks, one focusing on the debugging feature and the other focusing on the adaptability of creating assignments.
 
 
+\subsection{Testing Debugging}
+To test the debugging features, all students will start an assignment that has code available for them.
+%
+The code will have an error that will still allow the code to compile, but will cause a value to be incorrect somewhere in the middle of the code.
+%
+The students will be expected to not only identify where the issue is, but also fix the error.
+%
+Half the class will be allowed to use the tool, while the other half must only use the tools available to them on the machines at the university.
+%
+The students will not be permitted to work together.
+%
+The times of how long it takes the task will be recorded.
+%
+In addition to this test, another test will be given where the code never ends execution.
+%
+Both groups will also be asked to identify where the infinite loop is coming from and to fix it.
+%
+The times of this will be recorded similarly to the previous test.
 
-To evaluate the tool, two groups of participants will be selected from an Operating Systems course, Group $A$ and Group $B$.
+
+\subsection{Testing Assignments}
+An assignment will be created, but no code will be given with the assignment.
 %
-Both groups will be given the executable UART\cite{6558126} driver that should be able to run on the NS16550A\cite{zhao2013} chipset.
+Registers will have certain values and the participants will be asked to complete a task based off of these values.
 %
-The NS16550A chipset requires that the DLAB bit be set while setting the divisor, but the executable will not do this.
+This will allow us to determine if the layout is easy to use and information is easily accessible.
 %
-The executable will have a bug that will allow it to boot in QEMU, but would otherwise fail on hardware.
+The goal of this exercise is not to determine the ability of the student's programming, but rather how well the design works.
 %
-The executable will not check the value of the DLAB bit while setting the divisor.
+An additional assignment will be created that will test how students use the tool to write code that accomplishes a certain task.
 %
-Both groups will be allowed to see a demonstration of the executable working on QEMU and not working on the NS16550A.
+They will be given a problem that, for their level of programming, will be slightly difficult, but doable within a thirty minute time span.
 %
-Both groups will also receive the same documentation of what should happen when the executable runs.
-%
-Group A will only be allowed to use QEMU's built in debugging features, and Group B will only be allowed to use \tool{}.
-%
-For a participant to pass the test, he/she must correctly identify the bug within a thirty minutes.
-%
-The time the participant takes to correctly identify the bug will be recorded and used for the results.

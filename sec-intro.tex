@@ -4,15 +4,23 @@
 
 \section{Introduction}
 
+Writing low level code, such as assembly, is essential in writing software such as operating systems.
+%
+Every computer science student will have to write assembly at some point in their academic career.
+%
+However, there are not many tools available that allow students to easily learn how to write and debug their code.
 
 
-Debugging while writing very low level code, such as for operating systems, is very difficult.
+
+
+Debugging while writing low level code, such as assembly, is very difficult for novice programmers, such as students.
 %
-When starting, there are very few tools available to assist someone writing an operating system from scratch.
+Students have no good way to visualize what their code is going to do while it is running.
 %
-Additionally, QEMU is only an virtual environment; code could run on the virtual environment that does not on hardware.
+Additionally, students have a difficult time seeing why their code is breaking or having unexpected behavior such as infinitely looping.
+
+
+
+\tool{} aims to solve this issue by giving the novice a sandboxed web interface that allows developers to see their code and how it affecting both the registers and the stack.
 %
-Introducing \tool{}, a visualizer extension for QEMU that helps novice developers, such as college students, see what is going on under the hood.
-%
-\tool{} allows the developer to see everything the program is doing inside of QEMU in real-time.
-%
+It also provides basic debugging tools that allow programmers to step through their code to determine what lines of code are causing what unexpected outcome.

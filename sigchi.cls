@@ -722,8 +722,7 @@
  \setcounter{footnote}{0}
  \let\maketitle\relax
  \let\@maketitle\relax
- \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\gdef\@subtitle{}\let\thanks\relax
- \@copyrightspace} % JRB 2008-08-13 this line was commented out for some reason
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\gdef\@subtitle{}\let\thanks\relax} % JRB 2008-08-13 this line was commented out for some reason
                    % which meant that the copyright space wasn't reserved.
                    % I re-enabled it.
 
@@ -1587,43 +1586,43 @@
 
 
 
-% Copyright
+%Copyright
 \RequirePackage{acmcopyright}
 \setcopyright{none}
 
 %
 \global\boilerplate={\@copyrightpermission}
 %
-\newtoks\copyrightetc
-\ifnum\ACM@basesize=9\relax
-\global\copyrightetc{%
-{\noindent\confname\ \the\conf } \the\confinfo \par\smallskip
-  \if@printcopyright
-    \copyright\ \the\copyrtyr\ \@copyrightowner
-  \fi
-  \if@acmowned ISBN \else\ifnum\acm@copyrightmode=2 ISBN \else \par\smallskip ACM ISBN \fi\fi
- \the\acmcopyr\ifx\@acmPrice\@empty.\else\dots\@acmPrice\fi\par\smallskip
-{DOI: \small\expandafter\printdoi\expandafter{\@doi}}} 
-\toappear{\fontsize{7pt}{8pt}\fontfamily{ptm}\selectfont
-  \the\boilerplate\par\smallskip
- \the\copyrightetc}
-\fi
-\ifnum\ACM@basesize=10\relax
-\global\copyrightetc{%
-{\noindent\confname\ \the\conf\ \the\confinfo}\par\smallskip
-  \if@printcopyright
-    \copyright\ \the\copyrtyr\ \@copyrightowner
-  \fi
-  \if@acmowned ISBN \else\ifnum\acm@copyrightmode=2 ISBN \else \par\smallskip ACM ISBN \fi\fi
- \the\acmcopyr\ifx\@acmPrice\@empty.\else\dots\@acmPrice\fi\par\smallskip
-{DOI: \small\expandafter\printdoi\expandafter{\@doi}}} 
-\toappear{\fontsize{7.5pt}{8.5pt}\fontfamily{ptm}\selectfont
-  \the\boilerplate\par\smallskip
- \the\copyrightetc}
-\fi
+% \newtoks\copyrightetc
+% \ifnum\ACM@basesize=9\relax
+% \global\copyrightetc{%
+% {\noindent\confname\ \the\conf } \the\confinfo \par\smallskip
+%   \if@printcopyright
+%     \copyright\ \the\copyrtyr\ \@copyrightowner
+%   \fi
+%   \if@acmowned ISBN \else\ifnum\acm@copyrightmode=2 ISBN \else \par\smallskip ACM ISBN \fi\fi
+%  \the\acmcopyr\ifx\@acmPrice\@empty.\else\dots\@acmPrice\fi\par\smallskip
+% {DOI: \small\expandafter\printdoi\expandafter{\@doi}}} 
+% \toappear{\fontsize{7pt}{8pt}\fontfamily{ptm}\selectfont
+%   \the\boilerplate\par\smallskip
+%  \the\copyrightetc}
+% \fi
+% \ifnum\ACM@basesize=10\relax
+% \global\copyrightetc{%
+% {\noindent\confname\ \the\conf\ \the\confinfo}\par\smallskip
+%   \if@printcopyright
+%     \copyright\ \the\copyrtyr\ \@copyrightowner
+%   \fi
+%   \if@acmowned ISBN \else\ifnum\acm@copyrightmode=2 ISBN \else \par\smallskip ACM ISBN \fi\fi
+%  \the\acmcopyr\ifx\@acmPrice\@empty.\else\dots\@acmPrice\fi\par\smallskip
+% {DOI: \small\expandafter\printdoi\expandafter{\@doi}}} 
+% \toappear{\fontsize{7.5pt}{8.5pt}\fontfamily{ptm}\selectfont
+%   \the\boilerplate\par\smallskip
+%  \the\copyrightetc}
+% \fi
 
-\clubpenalty=10000 
-\widowpenalty = 10000
+% \clubpenalty=10000 
+% \widowpenalty = 10000
 
 %% 
 % For the CCSXML 2012 Categories

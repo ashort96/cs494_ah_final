@@ -20,6 +20,8 @@
 *.mtc
 *.mtc1
 *.out
+*.fls
+main.fdb_latexmk
 *.synctex.gz
 main.pdf
 *.bak
